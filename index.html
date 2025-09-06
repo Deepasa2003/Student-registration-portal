@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration System</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <h1>Student Registration</h1>
+    <button id="themeToggle" class="theme-btn">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </nav>
+
+  <!-- Intro -->
+  <header class="intro">
+    <h2>Student <span>Registration System</span></h2>
+    <p>A modern, user-friendly system to register,update and manage student information.</p>
+    <button id="addBtn" class="add-btn">
+      <i class="fa-solid fa-user-plus"></i> Add Student
+    </button>
+
+    <!--  Add Student button -->
+  <div id="emptyMsg" class="empty-box">
+    <p>No students registered yet. Click 'Add Student' above to get started!</p>
+    </div>
+
+  </header>
+
+  <!-- Registration Form -->
+  <section class="form-section hidden" id="formSection">
+    <form id="studentForm">
+
+      <label for="studentId">Student ID</label>
+      <input type="text" id="studentId" placeholder="4HG21EC000" required>
+      
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Deepa Angadi" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="abc@gmail.com" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" placeholder="0123456789" required>
+
+      <label for="photo">Profile Photo</label>
+      <input type="file" id="photo" accept="image/*" placeholder="upload image">
+      <div class="buttons">
+        <button type="reset" class="secondary">Clear</button>
+        <button type="submit">Save</button>
+      </div>
+    </form>
+  </section>
+
+
+  <!--  Student Cards -->
+<section id="studentList" class="list-section"></section>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
